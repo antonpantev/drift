@@ -8,6 +8,15 @@ $(document).ready(function() {
     $('#mainBtn').click(function() {
         var params = { ll: position };
         $.get('/yelp', params, function(data) {
+            for(var i in data) {
+                var address = data[i].result.location.display_address;
+                
+                var str = "";
+                for(var j in address) {
+                    str += address[j] + " ";
+                }
+                console.log(str);
+            }
             console.log(data);
         });
     });
