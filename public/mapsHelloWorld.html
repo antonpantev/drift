@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCodRXYvN5EZ1CfXPWQw0Vo1M9eI9VsoP0&sensor=false">
+    </script>
+    <script type="text/javascript">
+    var directionsDisplay;
+    var directionsService = new google.maps.DirectionsService();
+    var map;
+
+    function initialize() {
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+        var mapOptions = {
+            zoom: 6,
+            center: chicago
+        }
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        directionsDisplay.setMap(map);
+    }
+
+    function calcRoute() {
+        var start = "2000 E Cary St Richmond, VA 23223";
+        var end = "1606 W Main St Richmond, VA 23220";
+        var waypts = [];
+
+        waypts.push({
+            location:"100-200-300 W Broad St Richmond, VA 23220 ",
+            stopover:true});
+
+        var request = {
+            origin: start,
+            destination: end,
+            waypoints: waypts,
+            optimizeWaypoints: true,
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        directionsService.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                directionsDisplay.setDirections(response);
+            }
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+  </head>
+  <body>
+    <div id="map-canvas"/>
+  </body>
+</html>
