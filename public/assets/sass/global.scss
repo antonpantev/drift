@@ -1,0 +1,17 @@
+/* Fonts */
+@font-face {
+  font-family: "Aleo";
+  src: url("../fonts/aleo/Aleo-Regular.otf");
+}
+
+/* Colors */
+
+$pink : #ff6666;
+$light-pink : #ff7676;
+$black : #333333;
+$white : #ffffff;
+
+/* Basic Tags */
+
+body { font-family: "Aleo", sans-serif; }
+.container { display: none; }
