@@ -74,7 +74,11 @@ body {
     height: 20px; 
     text-align:left !important;
     padding-bottom:0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+  #results .title  {color:#333;text-decoration: none;}
   #results .pic {
     display: inline-block;
     float:left;
