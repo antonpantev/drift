@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script src="/../bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+	
+	var position = null;
+	$(function(){
+	    if (navigator.geolocation)
+	    {
+	        navigator.geolocation.getCurrentPosition(function(pos) {
+	            position = [pos.coords.latitude, pos.coords.longitude];
+	        });
+	    }	   
+	});
+
+</script>	
+</body>
+
+</html>

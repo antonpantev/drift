@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="assets/css/normalize.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <link rel="stylesheet" href="/../bower_components/bootstrap/dist/js/bootstrap.min.css" />
-
-
   <!-- ==== Fonts ==== -->
 
 
@@ -54,14 +51,25 @@
   </section>
   <section>
     <div id="button">
-      <a href="#">I'm Ready!</a>
+      <button id="readyButton">I'm Ready!</button>
     </div><!-- #button -->
   </section>
 
   <!-- ==== Javascript ==== -->
-  <script src="/../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0-rc1/jquery.js"></script>
 
   <script src="assets/js/script.js" />
+  <script>   
+    var position = null;
+    $(function(){
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(function(pos) {
+                position = [pos.coords.latitude, pos.coords.longitude];
+            });
+        }    
+    });
+  </script>
 
 </body>
 </html>
