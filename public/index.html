@@ -2,18 +2,12 @@
 <html lang="en-us" dir="ltr">
 <head>
   <meta charset="utf-8" />
-
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
     <title>Random Destination</title>
 
   <!-- ==== Stylesheets ==== -->
   <link rel="stylesheet" href="assets/css/normalize.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <link rel="stylesheet" href="/../bower_components/bootstrap/dist/js/bootstrap.min.css" />
-
-
-  <!-- ==== Fonts ==== -->
-
 
 </head>
 <body>
@@ -40,25 +34,34 @@
   <section>
     <div id="message">
       <div class="container">
-        <span>Pick a timeframe.</span>
+        <span>Pick a timeframe:</span>
       </div><!-- .container -->
     </div><!-- #message -->
   </section>
   <section>
     <div id="time-selection">
-      <img src="assets/img/dropdown-mock.jpg" />
+      <select>
+        <option>An afternoon</option>
+      </select>
+      <!-- <img src="assets/img/dropdown-mock.jpg" /> -->
     </div><!-- #time-selection -->
   </section>
   <section>
     <div id="button">
-      <a href="#">I'm Ready!</a>
+      <button id="readyButton">I'm Ready!</button>
     </div><!-- #button -->
   </section>
 
-  <!-- ==== Javascript ==== -->
-  <script src="/../bower_components/jquery/dist/jquery.min.js"></script>
 
-  <script src="assets/js/script.js" />
+  <div id="loading">
+    <div id="spinner"></div>
+  </div>
+
+  <!-- ==== Javascript ==== -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0-rc1/jquery.js"></script>
+
+  <script src="assets/js/script.js"></script>
+
 
 </body>
 </html>
