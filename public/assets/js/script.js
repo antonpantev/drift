@@ -4,15 +4,21 @@ var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
 
+var hasBeenCalled = false;
+
 function initializeMap() {
-    directionsDisplay = new google.maps.DirectionsRenderer();
-    var chicago = new google.maps.LatLng(position[0], position[1]);
-    var mapOptions = {
-        zoom: 6,
-        center: chicago
+    if(!hasBeenCalled) {
+        hasBeenCalled = true;
+    
+        directionsDisplay = new google.maps.DirectionsRenderer();
+        var chicago = new google.maps.LatLng(position[0], position[1]);
+        var mapOptions = {
+            zoom: 6,
+            center: chicago
+        }
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        directionsDisplay.setMap(map);
     }
-    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    directionsDisplay.setMap(map);
 }
 
 function calcRoute(places) {
@@ -62,14 +68,20 @@ $(document).ready(function(){
         });
     }
     
-    $("#readyButton").click(function() {
+    $("#readyButton").click(foobar);
+    
+    function foobar(doIt) {
         $("#loading").show();
         
         var params = { ll: position.toString() };
         
         $.get('/yelp', params, function(data) {
             $("#loading").hide();
-            $("#page1").hide('slow');            
+            $("#page1").hide('slow');
+
+            if(doIt) {
+                $(".result").remove();
+            }
             
             /* Update the map to show the route */
             var places = [];
@@ -111,7 +123,14 @@ $(document).ready(function(){
                 calcRoute(places);
             });
         });
+    }
+    
+    $("#page2 #logo a").click(function(e) {
+        console.log("page two logo");
+        
+        foobar(true);
+        
+        e.preventDefault();
     });
-
     
 });
