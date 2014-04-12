@@ -1,9 +1,36 @@
 <html>
 <head>
+<script src="js/jquery-2.1.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    getLocation();
 
+    $('#mainBtn').click(function() {
+        var params = { term:"food", ll: position };
+        $.get('/yelp', params, function(data) {
+            console.log(data);
+        });
+    });
+});
+
+var position = null;
+
+function getLocation()
+{
+    if (navigator.geolocation)
+    {
+        navigator.geolocation.getCurrentPosition(function(pos) {
+            position = [pos.coords.latitude, pos.coords.longitude].toString();;
+        });
+    }
+    else{
+        console.log('crap no geolocation');
+    }
+}
+</script>
 </head>
 <body>
-<button type="button">Click Me!</button>
+<button id="mainBtn" type="button">Click Me!</button>
 <div id="output">
 </div>
 </body>
