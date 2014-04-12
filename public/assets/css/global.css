@@ -1,0 +1,12 @@
+/* Fonts */
+@font-face {
+  font-family: "Aleo";
+  src: url("../fonts/aleo/Aleo-Regular.otf"); }
+
+/* Colors */
+/* Basic Tags */
+body {
+  font-family: "Aleo", sans-serif; }
+
+.container {
+  display: none; }
