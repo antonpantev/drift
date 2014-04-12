@@ -22,10 +22,10 @@
   "homepage": "https://github.com/antonpantev/drift",
   "dependencies": {
     "express": "^4.0.0",
-    "logfmt": "^1.1.2"
+    "logfmt": "^1.1.2",
+    "yelp": "^0.1.1"
   },
   "engines": {
     "node": "0.10.x"
   }
 }
-
