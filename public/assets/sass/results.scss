@@ -12,11 +12,12 @@
 
   }
 
-  #navigation { background: $black; position: absolute; color: $white; padding-left: -30px; height: 100%; width: 50px; float: left; text-align: center;
+  #navigation { background: $black; position: absolute; flex-flow: y-axis; color: $white; padding-left: -30px; height: 100%; width: 50px; float: left; text-align: center;
 
-    .nav-button { text-align: center; width: 50px; padding-top: 10px;
+    .nav-button { text-align: center; width: 50px; padding-top: 10px; -webkit-transition:.2s ease-in-out; -moz-transition: .2s ease-in-out; -o-transition: .2s ease-in-out;
       .nav-button img { width: 50px; }
     }
+    .nav-button:hover { opacity: 0.7; }
   }
 
   #results { display: block; width: 300px; margin-left: 70px;
