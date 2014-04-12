@@ -15,6 +15,31 @@ function initializeMap() {
     directionsDisplay.setMap(map);
 }
 
+function calcRoute(places) {
+    var start = places[0];
+    var end = places[places.length-1];
+    var waypts = [];
+
+    for(var i = 1; i < places.length-1; i++) {
+        waypts.push({
+            location:places[i],
+            stopover:true});
+    }
+
+    var request = {
+        origin: start,
+        destination: end,
+        waypoints: waypts,
+        optimizeWaypoints: true,
+        travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        }
+    });
+}
+
 $(document).ready(function(){
     $("#loading").hide();
     $("#readyButton").prop("disabled",true);
@@ -34,11 +59,27 @@ $(document).ready(function(){
         
         $.get('/yelp', params, function(data) {
             $("#loading").hide();
-            $("#page1").hide('slow');
+            $("#page1").hide('slow');            
+            
+            /* Update the map to show the route */
+            var places = [];
+            
+            for(var i in data) {
+                var address = data[i].result.location.display_address;
+                
+                var str = "";
+                for(var j in address) {
+                    str += address[j] + " ";
+                }
+                
+                //console.log(str);
+                places.push(str);
+            }
+            
             $("#page2").show('slow', function() {
                 initializeMap();
+                calcRoute(places);
             });
-            console.log(data);
         });
     });
 
