@@ -1,0 +1,6 @@
+@media screen and (max-width: 480px) {
+  #internal-header {
+    background: url("../img/page_heading.jpg");
+    height: 65px; }
+    #internal-header #logo {
+      padding: 15px 0 0 92px; } }
