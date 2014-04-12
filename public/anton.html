@@ -1,13 +1,60 @@
 <html>
 <head>
 <script src="assets/js/jquery-2.1.0.min.js"></script>
-<script>
+
+<script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCodRXYvN5EZ1CfXPWQw0Vo1M9eI9VsoP0&sensor=false">
+</script>
+
+<script type="text/javascript">
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+
+function initializeMap() {
+    directionsDisplay = new google.maps.DirectionsRenderer();
+    var chicago = new google.maps.LatLng(position[0], position[1]);
+    var mapOptions = {
+        zoom: 6,
+        center: chicago
+    }
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    directionsDisplay.setMap(map);
+}
+
+function calcRoute(places) {
+    var start = places[0];
+    var end = places[places.length-1];
+    var waypts = [];
+
+    for(var i = 1; i < places.length-1; i++) {
+        waypts.push({
+            location:places[i],
+            stopover:true});
+    }
+
+    var request = {
+        origin: start,
+        destination: end,
+        waypoints: waypts,
+        optimizeWaypoints: true,
+        travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(response);
+        }
+    });
+}
+    
 $(document).ready(function() {
     getLocation();
 
     $('#mainBtn').click(function() {
-        var params = { ll: position };
+        var params = { ll: position.toString() };
         $.get('/yelp', params, function(data) {
+            var places = [];
+            
             for(var i in data) {
                 var address = data[i].result.location.display_address;
                 
@@ -15,9 +62,13 @@ $(document).ready(function() {
                 for(var j in address) {
                     str += address[j] + " ";
                 }
+                
                 console.log(str);
+                places.push(str);
             }
-            console.log(data);
+            
+            //console.log(data);
+            calcRoute(places);
         });
     });
 });
@@ -29,7 +80,8 @@ function getLocation()
     if (navigator.geolocation)
     {
         navigator.geolocation.getCurrentPosition(function(pos) {
-            position = [pos.coords.latitude, pos.coords.longitude].toString();;
+            position = [pos.coords.latitude, pos.coords.longitude];
+            initializeMap();
         });
     }
     else{
@@ -37,10 +89,12 @@ function getLocation()
     }
 }
 </script>
+
+
 </head>
 <body>
 <button id="mainBtn" type="button">Click Me!</button>
-<div id="output">
+<div id="map-canvas" style="border-style:solid; border-width:1px; height:300px; margin:10px;">
 </div>
 </body>
 </html>
