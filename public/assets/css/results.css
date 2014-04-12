@@ -8,6 +8,10 @@
 body {
   font-family: "Aleo", sans-serif; }
 
+hr {
+  width:90%;
+}
+
 .container {
   display: none; }
 
