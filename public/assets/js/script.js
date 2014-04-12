@@ -43,6 +43,14 @@ function calcRoute(places) {
 $(document).ready(function(){
     $("#loading").hide();
     $("#readyButton").prop("disabled",true);
+    
+    var source   = $("#resultTemplate").html();
+    var template = Handlebars.compile(source);
+    
+    var context = {title: "My New Post", body: "This is my first post!"}
+    var html    = template(context);
+    
+    console.log(html);
 
     if (navigator.geolocation)
     {
