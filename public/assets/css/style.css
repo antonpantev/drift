@@ -5,10 +5,14 @@
 
 /* Colors */
 body {
-  font-family: "Aleo", sans-serif; }
+  font-family: "Aleo", sans-serif; background:#333;}
 
 .container {
   display: none; }
+
+section {
+  text-align:center;
+}
 
 /* All application CSS is located within the media-query */
 @media screen and (max-width: 480px) {
@@ -95,7 +99,7 @@ body {
     width: 200px;
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 3px #d89292; }
+    /*box-shadow: 0px 3px #d89292;*/ }
 
   #button:hover {
     background: #ff7676; } }
