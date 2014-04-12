@@ -26,7 +26,7 @@ body {
     text-decoration: none; }
 
   #background {
-    background: url("../img/background.jpg") no-repeat fixed bottom;
+    background: #333333 no-repeat fixed bottom;
     position: absolute;
     z-index: -1;
     overflow: hidden;

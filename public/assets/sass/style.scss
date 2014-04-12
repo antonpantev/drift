@@ -28,7 +28,7 @@ body { font-family: "Aleo", sans-serif; }
   a:link, a:active, a:visited { color: $white; text-decoration: none; }
 
 
-  #background { background: url('../img/background.jpg') no-repeat fixed bottom; position: absolute; z-index: -1; overflow: hidden; background-size: cover;  height: 100%; width: 100%; }
+  #background { background: $black /*url('../img/background.jpg')*/ no-repeat fixed bottom; position: absolute; z-index: -1; overflow: hidden; background-size: cover;  height: 100%; width: 100%; }
 
   /* Header */
 
