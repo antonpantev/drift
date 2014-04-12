@@ -1,12 +1,12 @@
 <html>
 <head>
-<script src="js/jquery-2.1.0.min.js"></script>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
 <script>
 $(document).ready(function() {
     getLocation();
 
     $('#mainBtn').click(function() {
-        var params = { term:"food", ll: position };
+        var params = { ll: position };
         $.get('/yelp', params, function(data) {
             console.log(data);
         });

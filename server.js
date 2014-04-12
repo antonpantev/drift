@@ -22,8 +22,11 @@ app.get('/yelp', function(req, res) {
     if(Object.keys(req.query).length > 0) {
         params = req.query;
     } else {
-        params = {term: "food", location: "Montreal"};
+        params = {location: "Montreal"};
     }
+    
+    params.sort = 2;
+    params.category_filter = "restaurants";
     
     yelp.search(params, function(error, data) {
         res.json(data);
