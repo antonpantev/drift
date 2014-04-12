@@ -61,7 +61,8 @@ body {
   #results .title {
     width: 300px;
     font-size: 1.3em;
-    padding: 20px; }
+    padding: 20px;
+    height: 20px; }
   #results .pic {
     display: inline-block;
     padding: 20px;
