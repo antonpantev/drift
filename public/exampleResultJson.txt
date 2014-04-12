@@ -1,0 +1,137 @@
+[
+  {
+    "category": "nightlife",
+    "result": {
+      "is_claimed": false,
+      "distance": 4044.708666241578,
+      "mobile_url": "http://m.yelp.com/biz/viceroy-richmond",
+      "rating_img_url": "http://s3-media1.ak.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+      "review_count": 35,
+      "name": "Viceroy",
+      "snippet_image_url": "http://s3-media2.ak.yelpcdn.com/photo/ORpn9wJm29d-XH28GeiYTg/ms.jpg",
+      "rating": 3.5,
+      "url": "http://www.yelp.com/biz/viceroy-richmond",
+      "location": {
+        "city": "Richmond",
+        "display_address": [
+          "600 N Sheppard St",
+          "Richmond, VA 23221"
+        ],
+        "postal_code": "23221",
+        "country_code": "US",
+        "address": [
+          "600 N Sheppard St"
+        ],
+        "state_code": "VA"
+      },
+      "phone": "8043427696",
+      "snippet_text": "I have been so stoked to check this place out. Remember nasty old cafe diem? This isn't it. It's nothing even remotely like it. High class, swanky decor,...",
+      "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/_kCXHT99jPHUavJG7BXmaA/ms.jpg",
+      "categories": [
+        [
+          "Wine Bars",
+          "wine_bars"
+        ],
+        [
+          "American (New)",
+          "newamerican"
+        ]
+      ],
+      "display_phone": "+1-804-342-7696",
+      "rating_img_url_large": "http://s3-media3.ak.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+      "id": "viceroy-richmond",
+      "is_closed": false,
+      "rating_img_url_small": "http://s3-media1.ak.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png"
+    }
+  },
+  {
+    "category": "arts,active",
+    "result": {
+      "is_claimed": false,
+      "distance": 3822.5156038598243,
+      "mobile_url": "http://m.yelp.com/biz/byrd-park-richmond",
+      "rating_img_url": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+      "review_count": 14,
+      "name": "Byrd Park",
+      "snippet_image_url": "http://s3-media3.ak.yelpcdn.com/photo/Bj9w5u0Hf9uPFWu7FoQsqQ/ms.jpg",
+      "rating": 4.5,
+      "url": "http://www.yelp.com/biz/byrd-park-richmond",
+      "location": {
+        "city": "Richmond",
+        "display_address": [
+          "600 S Blvd",
+          "Richmond, VA 23220"
+        ],
+        "postal_code": "23220",
+        "country_code": "US",
+        "address": [
+          "600 S Blvd"
+        ],
+        "state_code": "VA"
+      },
+      "phone": "8046465733",
+      "snippet_text": "Richmond has so many staples. And this is another one of them.\n\nIt's just a stones-throw from Maymont Park, and if you walk from Carytown it's wonderful...",
+      "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/lfotSWFL2HIv6K3hvNgrvA/ms.jpg",
+      "categories": [
+        [
+          "Parks",
+          "parks"
+        ]
+      ],
+      "display_phone": "+1-804-646-5733",
+      "rating_img_url_large": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+      "id": "byrd-park-richmond",
+      "is_closed": false,
+      "rating_img_url_small": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"
+    }
+  },
+  {
+    "category": "restaurants",
+    "result": {
+      "is_claimed": false,
+      "distance": 1892.8562522865157,
+      "mobile_url": "http://m.yelp.com/biz/sub-rosa-bakery-richmond",
+      "rating_img_url": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+      "review_count": 29,
+      "name": "Sub Rosa Bakery",
+      "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/photo/USKqhe_lbfhGaCTg00WLyA/ms.jpg",
+      "rating": 4.5,
+      "url": "http://www.yelp.com/biz/sub-rosa-bakery-richmond",
+      "location": {
+        "city": "Richmond",
+        "display_address": [
+          "620 N 25th St",
+          "Richmond, VA 23223"
+        ],
+        "postal_code": "23223",
+        "country_code": "US",
+        "address": [
+          "620 N 25th St"
+        ],
+        "state_code": "VA"
+      },
+      "phone": "8047887672",
+      "snippet_text": "It is so nice to live in a neighborhood that supports local business with full enthusiasm.  It makes me proud to live in Church Hill.  After a long waiting...",
+      "image_url": "http://s3-media1.ak.yelpcdn.com/bphoto/9KRb5FwLvhb9JUi2iI4QkA/ms.jpg",
+      "categories": [
+        [
+          "Cafes",
+          "cafes"
+        ],
+        [
+          "Bakeries",
+          "bakeries"
+        ],
+        [
+          "Coffee & Tea",
+          "coffee"
+        ]
+      ],
+      "display_phone": "+1-804-788-7672",
+      "rating_img_url_large": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+      "id": "sub-rosa-bakery-richmond",
+      "is_closed": false,
+      "rating_img_url_small": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"
+    }
+  }
+]
