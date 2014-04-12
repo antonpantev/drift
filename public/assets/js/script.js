@@ -99,7 +99,9 @@ $(document).ready(function(){
                     context.c = 'fa-glass';
                 } else {
                     context.c = 'fa-picture-o';
-                } 
+                }
+                
+                context.map = 'http://maps.google.com/?saddr=Current%20Location&daddr='+ encodeURIComponent(places[i]);
                 
                 $("#results").append(template(context));
             }
