@@ -1,6 +1,38 @@
-body {
-  background: white; }
+/* Fonts */
+@font-face {
+  font-family: "Aleo";
+  src: url("../fonts/aleo/Aleo-Regular.otf"); }
 
+body {
+  font-family: "Aleo", sans-serif; }
+
+.container {
+  margin: 0 auto;
+  width: 90%; }
+
+/* All application CSS is located within the media-query */
 @media screen and (max-width: 480px) {
+  /* Basic Tags */
   #desktop_alert {
-    display: none; } }
+    display: none; }
+
+  #background {
+    background: url("../img/background.jpg") no-repeat fixed bottom;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    background-size: cover;
+    height: 100%;
+    width: 100%; }
+
+  /* Header */
+  #header #logo {
+    padding-top: 50px;
+    text-align: center; }
+
+  #message {
+    padding: 100px 0 0 0;
+    text-align: center;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 0px 2px 1px #737373; } }
