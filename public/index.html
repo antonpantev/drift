@@ -59,17 +59,6 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0-rc1/jquery.js"></script>
 
   <script src="assets/js/script.js" />
-  <script>   
-    var position = null;
-    $(function(){
-        if (navigator.geolocation)
-        {
-            navigator.geolocation.getCurrentPosition(function(pos) {
-                position = [pos.coords.latitude, pos.coords.longitude];
-            });
-        }    
-    });
-  </script>
 
 </body>
 </html>
