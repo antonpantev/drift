@@ -10,8 +10,18 @@ body {
 
 hr {
   width:90%;
+  display: block; 
+  height: 1px;
+  border: 0; 
+  border-top: 1px solid #ccc;
+  margin: 0 auto; 
+  padding: 0;
+  margin-bottom:5px;
 }
 
+#page2 {
+  background:#fff !important;
+}
 .container {
   display: none; }
 
@@ -85,6 +95,9 @@ hr {
   #results .title a {
     color:#333 !important;
     text-decoration: none;}
+  #results .title a:hover {
+    color:#ff6666;
+  }
   #results .pic {
     display: inline-block;
     float:left;
