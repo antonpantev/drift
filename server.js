@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.set('json spaces', 2);
 
-var categories = ["arts,active", "nightlife", "restaurants"];
+var categories = ["arts", "nightlife", "restaurants"];
 
 app.get('/yelp', function(req, res) {
     var params;
