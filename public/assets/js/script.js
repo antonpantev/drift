@@ -19,6 +19,8 @@ $(document).ready(function(){
         
         $.get('/yelp', params, function(data) {
             $("#loading").hide();
+            $("#page1").hide('slow');
+            $("#page2").show('slow');
             console.log(data);
         });
     });
