@@ -1,10 +1,47 @@
-@media screen and (max-width:480px) {
+@import 'global.scss';
 
+
+
+  body { background: $white; color: $black; }
+  .container { display: block; }
+  #desktop_alert {display:none;}
 
   #internal-header { background: url('../img/page_heading.jpg'); height: 65px;
 
-    #logo { padding: 15px 0 0 92px; }
+    #logo { padding: 15px 0 0 80px; }
 
   }
 
-}
+  #navigation { background: $black; position: absolute; color: $white; padding-left: -30px; height: 100%; width: 50px; float: left; text-align: center;
+
+    .nav-button { text-align: center; width: 50px; padding-top: 10px;
+      .nav-button img { width: 50px; }
+    }
+  }
+
+  #results { display: block; width: 300px; margin-left: 70px;
+
+    .space { margin: 0 auto; height: 5px; width: 100%; border-top: 2px solid #e9e9e9; border-bottom: 2px solid #e9e9e9; }
+
+    .result {  }
+
+    .cat { float: left; padding: 20px;
+      img {width: 24px;}
+    }
+
+    .title { width: 300px; font-size: 1.3em; padding: 20px;}
+
+    .pic {  display: inline-block; padding: 20px; width: 100px; margin-left: -67px;
+      img { width: 100px; }
+    }
+
+    .details { display: inline-block; float: left; margin-top: -140px; margin-left: 130px; width: 230px; font-size: 1.1em; padding-top: 18px;
+      .tel { color: $pink; }
+    }
+
+    .review { margin: 0 auto; clear: both; width: 90%; text-overflow: ellipsis; text-decoration: italic; font-size: 0.9em; padding-bottom: 30px;
+
+      .quote { position: relative; color: $pink; font-size: 2em; display: inline-block; height: 2px; width: 10px; }
+    }
+
+  }

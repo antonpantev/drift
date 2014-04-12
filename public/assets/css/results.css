@@ -1,6 +1,96 @@
-@media screen and (max-width: 480px) {
-  #internal-header {
-    background: url("../img/page_heading.jpg");
-    height: 65px; }
-    #internal-header #logo {
-      padding: 15px 0 0 92px; } }
+/* Fonts */
+@font-face {
+  font-family: "Aleo";
+  src: url("../fonts/aleo/Aleo-Regular.otf"); }
+
+/* Colors */
+/* Basic Tags */
+body {
+  font-family: "Aleo", sans-serif; }
+
+.container {
+  display: none; }
+
+body {
+  background: white;
+  color: #333333; }
+
+.container {
+  display: block; }
+
+#desktop_alert {
+  display: none; }
+
+#internal-header {
+  background: url("../img/page_heading.jpg");
+  height: 65px; }
+  #internal-header #logo {
+    padding: 15px 0 0 80px; }
+
+#navigation {
+  background: #333333;
+  position: absolute;
+  color: white;
+  padding-left: -30px;
+  height: 100%;
+  width: 50px;
+  float: left;
+  text-align: center; }
+  #navigation .nav-button {
+    text-align: center;
+    width: 50px;
+    padding-top: 10px; }
+    #navigation .nav-button .nav-button img {
+      width: 50px; }
+
+#results {
+  display: block;
+  width: 300px;
+  margin-left: 70px; }
+  #results .space {
+    margin: 0 auto;
+    height: 5px;
+    width: 100%;
+    border-top: 2px solid #e9e9e9;
+    border-bottom: 2px solid #e9e9e9; }
+  #results .cat {
+    float: left;
+    padding: 20px; }
+    #results .cat img {
+      width: 24px; }
+  #results .title {
+    width: 300px;
+    font-size: 1.3em;
+    padding: 20px; }
+  #results .pic {
+    display: inline-block;
+    padding: 20px;
+    width: 100px;
+    margin-left: -67px; }
+    #results .pic img {
+      width: 100px; }
+  #results .details {
+    display: inline-block;
+    float: left;
+    margin-top: -140px;
+    margin-left: 130px;
+    width: 230px;
+    font-size: 1.1em;
+    padding-top: 18px; }
+    #results .details .tel {
+      color: #ff6666; }
+  #results .review {
+    margin: 0 auto;
+    clear: both;
+    width: 90%;
+    text-overflow: ellipsis;
+    text-decoration: italic;
+    font-size: 0.9em;
+    padding-bottom: 30px; }
+    #results .review .quote {
+      position: relative;
+      color: #ff6666;
+      font-size: 2em;
+      display: inline-block;
+      height: 2px;
+      width: 10px; }
