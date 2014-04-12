@@ -93,6 +93,14 @@ $(document).ready(function(){
                 
                 context.address = data[i].result.location.display_address;
                 
+                if(data[i].category == "restaurants") {
+                    context.c = 'fa-cutlery';
+                } else if(data[i].category == "nightlife") {
+                    context.c = 'fa-glass';
+                } else {
+                    context.c = 'fa-picture-o';
+                } 
+                
                 $("#results").append(template(context));
             }
             
