@@ -74,7 +74,7 @@
     </div> --><!-- #navigation -->
       <section id="results">
 
-     <header>
+        <header>
             <div id="internal-header">
               
               <div class="container">
@@ -85,90 +85,6 @@
             </div><!-- #internal-header -->
 
           </header>
-      <!-- RESULT -->
-
-        <div class="result">
-
-          <div class="title">
-            <i style="color:#ff6666;padding-right:10px;" class="fa fa-cutlery"></i> 
-            Chicken Tara Thai
-          </div>
-          <div class="pic">
-            <img src="assets/img/photos/chicken-thai.jpg" />
-          </div><!-- .pic -->
-          <div class="details">
-            1234 Main St. <br />Richmond, VA 21827
-            <div class="tel">
-                (804) 999-1009
-              </div><!-- .tel -->
-            <br />
-            <a href="" class="map" style="color:green;display:block !important;"><i class="fa fa-map-marker"></i> map</a>
-          </div><!-- .details -->
-
-          <div class="review">
-            <div class="quote">&#8220;</div>
-            HelloSometimes we ask questions without reading an email thoroughly as many of us did for the last event.  In honor of Yelp, the many questions they kindly.
-          </div><!-- .review -->
-          <hr />
-          <hr />
-        </div><!-- .result -->
-
-
-
-                <div class="result">
-
-          <div class="title">
-            <i style="color:#ff6666;padding-right:10px;" class="fa fa-picture-o"></i> 
-            Lewis Ginter Botanical Gardens
-          </div>
-          <div class="pic">
-            <img src="assets/img/photos/chicken-thai.jpg" />
-          </div><!-- .pic -->
-          <div class="details">
-            1234 Main St. <br />Richmond, VA 21827
-            <div class="tel">
-                (804) 999-1009
-              </div><!-- .tel -->
-            <br />
-            <a href="" class="map" style="color:green;display:block !important;"><i class="fa fa-map-marker"></i> map</a>
-          </div><!-- .details -->
-
-          <div class="review">
-            <div class="quote">&#8220;</div>
-            HelloSometimes we ask questions without reading an email thoroughly as many of us did for the last event.  In honor of Yelp, the many questions they kindly.
-          </div><!-- .review -->
-          <hr />
-          <hr />
-        </div><!-- .result -->
-
-
-
-        <div class="result">
-
-          <div class="title">
-            <i style="color:#ff6666;padding-right:10px;" class="fa fa-glass"></i> 
-            
-          </div>
-          <div class="pic">
-            <img src="assets/img/photos/chicken-thai.jpg" />
-          </div><!-- .pic -->
-          <div class="details">
-            1234 Main St. <br />Richmond, VA 21827
-            <div class="tel">
-                (804) 999-1009
-              </div><!-- .tel -->
-            <br />
-            <a href="" class="map" style="color:green;display:block !important;"><i class="fa fa-map-marker"></i> map</a>
-          </div><!-- .details -->
-
-          <div class="review">
-            <div class="quote">&#8220;</div>
-            HelloSometimes we ask questions without reading an email thoroughly as many of us did for the last event.  In honor of Yelp, the many questions they kindly.
-          </div><!-- .review -->
-          <hr />
-          <hr />
-        </div><!-- .result -->
-
 
 
       </section><!-- #results -->
@@ -183,12 +99,31 @@
   </div>
   
   <div id="resultTemplate" style="display: none;">
-    <div class="entry">
-      <h1>{{title}}</h1>
-      <div class="body">
-        {{body}}
+    <div class="result">
+
+      <div class="title">
+        <i style="color:#ff6666;padding-right:10px;" class="fa fa-cutlery"></i> 
+        <a href="#">{{name}}</a>
       </div>
-    </div>
+      <div class="pic">
+        <img src="assets/img/photos/chicken-thai.jpg" />
+      </div><!-- .pic -->
+      <div class="details">
+        1234 Main St. <br />Richmond, VA 21827
+        <div class="tel">
+            (804) 999-1009
+          </div><!-- .tel -->
+        <br />
+        <a href="" class="map" style="color:green;display:block !important;"><i class="fa fa-map-marker"></i> map</a>
+      </div><!-- .details -->
+
+      <div class="review">
+        <div class="quote">&#8220;</div>
+        {{snippet_text}}
+      </div><!-- .review -->
+      <hr />
+      <hr />
+    </div><!-- .result -->
   </div>
 
   <!-- ==== Javascript ==== -->

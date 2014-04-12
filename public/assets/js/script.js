@@ -46,11 +46,6 @@ $(document).ready(function(){
     
     var source   = $("#resultTemplate").html();
     var template = Handlebars.compile(source);
-    
-    var context = {title: "My New Post", body: "This is my first post!"}
-    var html    = template(context);
-    
-    console.log(html);
 
     if (navigator.geolocation)
     {
@@ -82,6 +77,14 @@ $(document).ready(function(){
                 
                 //console.log(str);
                 places.push(str);
+            }
+            
+            for(var i in data) {
+                console.log(data[i].result);
+            
+                var context = {title: "My New Post", body: "This is my first post!"}
+                var html    = template(data[i].result);
+                $("#results").append(html);
             }
             
             $("#page2").show('slow', function() {
