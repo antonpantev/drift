@@ -14,8 +14,7 @@ section {
   text-align:center;
 }
 
-/* All application CSS is located within the media-query */
-@media screen and (max-width: 480px) {
+
   /* Basic Tags */
   #desktop_alert {
     display: none; }
@@ -110,5 +109,38 @@ section {
     background: #ff7676; 
   } 
 
+
+/* -- spinner -- */
+
+  #loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.5);
+    -webkit-transition: all .5s ease;
+    z-index: 1000;
+  }
+
+  #loading.hide {
+      opacity: 0;
+  }
+
+  #spinner {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      left: 50%;
+      margin-top: -5px;
+      margin-left: -5px;
+      background-color: pink;
+      -webkit-transition: all 1000s linear;
+  }
+
+  #spinner.spin {
+      -webkit-transform: rotate(100000deg);
+  }
 
 

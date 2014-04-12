@@ -17,5 +17,20 @@ $(document).ready(function(){
             console.log(data);
         });
     });
-});
 
+    //spinner 
+
+    $('#spinner').addClass('spin');
+
+    function stopSpinner() {
+        $('#loading').addClass('hide');
+        $('#loading').one('webkitTransitionEnd', function() {
+            $('#loading').hide();
+        });
+    }
+
+    $(document).ajaxStop(function () {
+        $.active == 0 
+        stopSpinner();
+    });
+});
