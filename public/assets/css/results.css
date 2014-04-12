@@ -82,7 +82,9 @@ hr {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  #results .title  {color:#333;text-decoration: none;}
+  #results .title a {
+    color:#333 !important;
+    text-decoration: none;}
   #results .pic {
     display: inline-block;
     float:left;
