@@ -44,6 +44,13 @@ $(document).ready(function(){
     $("#loading").hide();
     $("#readyButton").prop("disabled",true);
     
+    Handlebars.registerHelper('ifCond', function(v1, v2, options) {
+      if(v1 != v2) {
+        return options.fn(this);
+      }
+      return options.inverse(this);
+    });
+    
     var source   = $("#resultTemplate").html();
     var template = Handlebars.compile(source);
 
@@ -82,9 +89,11 @@ $(document).ready(function(){
             for(var i in data) {
                 console.log(data[i].result);
             
-                var context = {title: "My New Post", body: "This is my first post!"}
-                var html    = template(data[i].result);
-                $("#results").append(html);
+                var context = {name: data[i].result.name, phone: data[i].result.phone, image_url: data[i].result.image_url, snippet_text: data[i].result.snippet_text};
+                
+                context.address = data[i].result.location.display_address;
+                
+                $("#results").append(template(context));
             }
             
             $("#page2").show('slow', function() {

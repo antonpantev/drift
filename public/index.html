@@ -106,12 +106,17 @@
         <a href="#">{{name}}</a>
       </div>
       <div class="pic">
-        <img src="assets/img/photos/chicken-thai.jpg" />
+        <img src="{{image_url}}" />
       </div><!-- .pic -->
       <div class="details">
-        1234 Main St. <br />Richmond, VA 21827
+        {{#each address}}
+          {{#ifCond @index "0"}}
+            <br/>
+          {{/ifCond}}
+          {{this}}
+        {{/each}}
         <div class="tel">
-            (804) 999-1009
+            {{phone}}
           </div><!-- .tel -->
         <br />
         <a href="" class="map" style="color:green;display:block !important;"><i class="fa fa-map-marker"></i> map</a>
