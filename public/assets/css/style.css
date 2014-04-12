@@ -3,6 +3,7 @@
   font-family: "Aleo";
   src: url("../fonts/aleo/Aleo-Regular.otf"); }
 
+/* Colors */
 body {
   font-family: "Aleo", sans-serif; }
 
@@ -35,4 +36,26 @@ body {
     text-align: center;
     font-size: 2.5em;
     color: #fff;
-    text-shadow: 0px 2px 1px #737373; } }
+    text-shadow: 0px 2px 1px #737373; }
+
+  #time-selection {
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 300px; }
+    #time-selection select {
+      width: 300px; }
+    #time-selection option {
+      height: 300px; }
+
+  #button {
+    padding: 25px 0 15px 0;
+    margin: 60px auto;
+    background: #ff6666;
+    color: white;
+    font-size: 1.5em;
+    height: 30px;
+    width: 150px;
+    text-align: center; }
+
+  #button:hover {
+    background: #ff7676; } }
