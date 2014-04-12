@@ -67,6 +67,10 @@ $(document).ready(function() {
                 places.push(str);
             }
             
+            for(var i in places) {
+                $("#mapLinks").append('<a href="http://maps.google.com/?saddr=Current%20Location&daddr='+ encodeURIComponent(places[i]) +'">Map</a><br/>');
+            }
+            
             //console.log(data);
             calcRoute(places);
         });
@@ -94,6 +98,10 @@ function getLocation()
 </head>
 <body>
 <button id="mainBtn" type="button">Click Me!</button>
+
+<div id="mapLinks">
+</div>
+
 <div id="map-canvas" style="border-style:solid; border-width:1px; height:300px; margin:10px;">
 </div>
 </body>
