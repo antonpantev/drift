@@ -17,10 +17,15 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.set('json spaces', 2);
 
 app.get('/yelp', function(req, res) {
-    var term = (req.query.term) ? req.query.term : "food";
-    var location = (req.query.location) ? req.query.location : "Montreal";
+    var params;
     
-    yelp.search({term: term, location: location}, function(error, data) {
+    if(Object.keys(req.query).length > 0) {
+        params = req.query;
+    } else {
+        params = {term: "food", location: "Montreal"};
+    }
+    
+    yelp.search(params, function(error, data) {
         res.json(data);
     });
 });
