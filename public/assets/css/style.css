@@ -39,7 +39,7 @@ section {
 
   /* Header */
   #header #logo {
-    padding-top: 50px;
+    padding-top: 20px;
     text-align: center; }
 
   #message {
@@ -90,7 +90,7 @@ section {
 
   #readyButton {
     padding: 10px 15px;
-    margin: 30px auto;
+    margin: 60px auto;
     background: #ff6666;
     color: white;
     font-size: 1.5em;

@@ -29,8 +29,8 @@ $(document).ready(function(){
         });
     }
 
-    $(document).ajaxStop(function () {
-        $.active == 0 
-        stopSpinner();
-    });
+    // $(document).ajaxStop(function () {
+    //     $.active == 0 
+    //     stopSpinner();
+    // });
 });
