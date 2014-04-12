@@ -89,7 +89,7 @@ $(document).ready(function(){
             for(var i in data) {
                 console.log(data[i].result);
             
-                var context = {name: data[i].result.name, phone: data[i].result.phone, image_url: data[i].result.image_url, snippet_text: data[i].result.snippet_text};
+                var context = {name: data[i].result.name, phone: data[i].result.phone.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3"), image_url: data[i].result.image_url, snippet_text: data[i].result.snippet_text};
                 
                 context.address = data[i].result.location.display_address;
                 
