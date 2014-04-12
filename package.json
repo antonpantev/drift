@@ -1,0 +1,31 @@
+{
+  "name": "drift",
+  "version": "0.0.0",
+  "description": "rva hackathon code",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonpantev/drift.git"
+  },
+  "keywords": [
+    "hackathon",
+    "rva"
+  ],
+  "author": "Tiffany Anton Joel",
+  "bugs": {
+    "url": "https://github.com/antonpantev/drift/issues"
+  },
+  "homepage": "https://github.com/antonpantev/drift",
+  "dependencies": {
+    "express": "^4.0.0",
+    "logfmt": "^1.1.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
+
